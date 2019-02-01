@@ -5,36 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <script src="WebGL.js"></script>
 </head>
-<body>
+<!--Excute the doGLDraw() function after WebGL.js is loaded-->
+<body onload="doGLDraw();">
     <!--Give the canvas an id and define the width and height-->
     <canvas id="GLCanvas" width="640" height="480">
         <!--This if the browser doesn't support canvas-->
         Your browser does not support the HTML5 canvas
     </canvas>
 
-<script type="text/javascript">
-    // I'm retriving a reference to the GLCanvas
-    var canvas = document.getElementById('GLCanvas');
     
-    
-    /*
-    I'm also retriving and binding a reference to the WebGL context.
-    The offical doc in MDN says "The HTMLCanvasElement.getContext() 
-    method returns a drawing context on the canvas, or null if 
-    the context identifier is not supported."
-
-    I store the reference to the WebGL context and store it in a local variable.
-    I don't think I this variable will change so I would save it in a const in th
-    future.
-    */
-    var gl = cavas.getContext("webgl") || canvas.getContext("experimental-webgl");
-
-    //I'm reseting the canvas to my preferred color. 
-    if (gl !== null) {
-        gl.clearColor(0.0, 0.8, 0.0, 1.0);// Set the color to be cleared
-        gl.COLOR_BUFFER_BIT;              // I cleared the colors
-    }
-</script>    
 </body>
 </html>
